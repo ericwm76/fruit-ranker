@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Webpack Starter Kit</title>
+    <title>Fruit Ranker</title>
   </head>
   <body>
-    <h1>Webpack Starter Kit</h1>
+    <header>
+      <h1>Fruit Ranker</h1>
+    </header>
+    <form>
+      <select name="fruit" id="fruit-list">
+        <option value="">Pick a fruit...</option>        
+        <option value="Apple">Apple</option>
+        <option value="Pear">Pear</option>
+        <option value="Banana">Banana</option>
+        <option value="Peach">Peach</option>
+        <option value="Grapefruit">Grapefruit</option>
+        <option value="Blueberry">Blueberry</option>
+        <option value="Kumquat">Kumquat</option>
+        <option value="Watermelon">Watermelon</option>
+        <option value="Blackberry">Blackberry</option>
+        <option value="Plum">Plum</option>
+      </select>
+      <label for="taste-num">Peak taste</label>
+      <input id="taste-num" type="number" placeholder="" value=""/>
+      <label for="vers-num">Versatility</label>
+      <input id="vers-num" type="number" placeholder="" value=""/>
+      <label for="cons-num">Consistency</label>
+      <input id="cons-num" type="number" placeholder="" value=""/>
+      <label for="port-num">Portability</label>
+      <input id="port-num" type="number" placeholder="" value=""/>
+      <label for="long-num">Longevity</label>
+      <input id="long-num" type="number" placeholder="" value=""/>
+      <button id="submit">Rank this fruit!</button>
+    </form>
+    <main>
 
-    <img src="./images/turing-logo.png" alt="turing logo" height="100px" width="100px">
-
+    </main>
     <!-- Do not include the index.js or main.bundle.js file here - it is done automatically by the webpack server -->
   </body>
 </html>
