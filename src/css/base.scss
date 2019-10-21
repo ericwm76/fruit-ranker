@@ -1,4 +1,5 @@
-$primary-background: white;
+$accent-font: 'Bangers', cursive;
+$main-font: 'Fresca', sans-serif;
 
 * {
   margin: 0;
@@ -7,19 +8,75 @@ $primary-background: white;
 }
 
 body {
-  background-color: $primary-background;
+  background-image: linear-gradient(to bottom, hsla(12, 100%, 50%, .7), hsla(26, 98%, 47%, .7), hsla(60, 100%, 50%, .7), hsla(113, 51%, 55%, .7));
+  display: grid;
+  grid-template-rows: 15% 1fr;
+  grid-template-columns: 25% 1fr;
+  grid-template-areas: 
+    'title title'
+    'form main';
+  height: 100vh;
 }
 
 header {
-  background-color: #ff9900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $accent-font;
+  font-size: 1.8em;
+  grid-area: title;
 }
 
-
-
 form {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-family: $main-font;
+  grid-area: form;
+} 
+
+.input {
+  font-family: $main-font;
+  font-size: 1em;
+  background-color: white;
+  border: 1px solid purple;
+  border-radius: 5px;
+  height: 30px;
+  margin: 5px;
+  width: 80%;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: minmax(350px, auto);
+  grid-area: main;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid purple;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-family: $main-font;
+  height: 350px;
+  margin: 10px;
+  padding: 10px;
+  width: 275px;
+}
+
+img {
+  height: 125px;
   margin: auto;
-  width: 30%;
+  width: 175px;
+}
+
+h2, h3 {
+  margin: auto;
+}
+
+label {
+  font-size: 1.2em;
+  margin: 10px 0 0 0;
 }
